@@ -1,0 +1,500 @@
+/* ================= VARIABLES Y CONFIGURACIÓN GLOBAL ================= */
+:root {
+    --color-principal: #f97316;     /* Naranja corporativo */
+    --color-secundario: #22c55e;    /* Verde ecológico */
+    --color-complementario: #000000;/* Negro */
+    --color-fondo: #ffffff;         /* Blanco */
+    --color-texto: #1e293b;         /* Gris oscuro legible */
+    --color-gris-claro: #f8fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: Helvetica, Arial, sans-serif;
+    color: var(--color-complementario);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ================= 1. HEADER ================= */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-complementario);
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-contenedor h1 {
+    color: var(--color-principal);
+    font-size: 1.8rem;
+}
+
+.eslogan-logo {
+    color: var(--color-secundario);
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu a {
+    color: var(--color-fondo);
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--color-principal);
+}
+
+/* ================= 2. HERO ================= */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    gap: 40px;
+}
+
+.hero-columna-izq {
+    flex: 1;
+}
+
+.hero-columna-izq h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--color-complementario);
+}
+
+.subtitulo-hero {
+    font-size: 1.1rem;
+    color: var(--color-secundario);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero-columna-izq p {
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+}
+
+.hero-columna-der {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e0630b;
+}
+
+/* ================= 3. SECCIÓN NOSOTROS ================= */
+.nosotros {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 40px;
+    background-color: var(--color-fondo);
+}
+
+.nosotros-imagen {
+    flex: 1;
+}
+
+.nosotros-texto {
+    flex: 1;
+}
+
+.nosotros-texto h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.nosotros-texto p {
+    margin-bottom: 15px;
+}
+
+/* ================= 4. PRODUCTOS O SERVICIOS ================= */
+.productos {
+    padding: 80px 40px;
+    background-color: var(--color-gris-claro);
+    text-align: center;
+}
+
+.productos h2, .servicios h2, .seccion-tabla h2, .galeria h2, .contacto h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.seccion-descripcion {
+    color: #64748b;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.productos-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.producto {
+    background-color: var(--color-fondo);
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+.producto img {
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.producto h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: var(--color-complementario);
+}
+
+.producto p {
+    font-size: 0.9rem;
+    color: #475569;
+    margin-bottom: 15px;
+}
+
+.precio {
+    display: block;
+    font-weight: bold;
+    color: var(--color-secundario);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.btn-tarjeta {
+    background-color: var(--color-complementario);
+    color: var(--color-fondo);
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-tarjeta:hover {
+    background-color: var(--color-principal);
+}
+
+/* ================= 5. BENEFICIOS / SERVICIOS PRINCIPALES ================= */
+.servicios {
+    padding: 80px 40px;
+    background-color: var(--color-fondo);
+    text-align: center;
+}
+
+.servicios-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.servicio-item {
+    background-color: var(--color-gris-claro);
+    border-top: 4px solid var(--color-secundario);
+    padding: 30px;
+    border-radius: 8px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.icono {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.servicio-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.servicio-item p {
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+/* ================= 6. TABLA DE PRECIOS ================= */
+.seccion-tabla {
+    padding: 80px 40px;
+    background-color: var(--color-gris-claro);
+    text-align: center;
+}
+
+.tabla-contenedor {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+.tabla-precios {
+    width: 100%;
+    max-width: 900px;
+    border-collapse: collapse;
+    background-color: var(--color-fondo);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.tabla-precios th, .tabla-precios td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tabla-precios th {
+    background-color: var(--color-complementario);
+    color: var(--color-fondo);
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.tabla-precios tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* ================= 7. GALERÍA ================= */
+.galeria {
+    padding: 80px 40px;
+    background-color: var(--color-fondo);
+    text-align: center;
+}
+
+.galeria-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.galeria-contenedor img {
+    width: 350px;
+    height: 230px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-contenedor img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+/* ================= 8. FORMULARIO DE CONTACTO ================= */
+.contacto {
+    padding: 80px 40px;
+    background-color: var(--color-gris-claro);
+    text-align: center;
+}
+
+.formulario-contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    background-color: var(--color-fondo);
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: var(--color-complementario);
+}
+
+input, select, textarea {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--color-principal);
+}
+
+.btn-enviar {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn-enviar:hover {
+    background-color: #d9620d;
+}
+
+/* ================= 9. FOOTER ================= */
+.pie-pagina {
+    background-color: var(--color-complementario);
+    color: var(--color-fondo);
+    padding: 40px;
+    text-align: center;
+}
+
+.footer-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-info h3 {
+    color: var(--color-principal);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.footer-info p {
+    font-size: 0.95rem;
+    margin: 3px 0;
+    color: #cbd5e1;
+}
+
+.footer-derechos {
+    border-top: 1px solid #334155;
+    width: 100%;
+    padding-top: 15px;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+/* ================= DISEÑO RESPONSIVE BÁSICO ================= */
+@media (max-width: 768px) {
+    /* Header vertical */
+    .encabezado {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Hero de dos columnas a una */
+    .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero-columna-izq h2 {
+        font-size: 2rem;
+    }
+
+    /* Sección Nosotros reorganizada */
+    .nosotros {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    /* Tarjetas y galería ajustadas */
+    .producto, .servicio-item {
+        width: 100%;
+    }
+
+    .galeria-contenedor img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ajuste de formularios y padding general */
+    .productos, .servicios, .seccion-tabla, .galeria, .contacto {
+        padding: 50px 20px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
